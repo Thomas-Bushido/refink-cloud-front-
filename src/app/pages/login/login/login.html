@@ -1,0 +1,13 @@
+<header>
+    <img src="/assets/logo.png" alt="Logo" class="logo-header" />
+</header>
+<div class="login">
+  <h2>Connexion</h2>
+  <form (ngSubmit)="onLoginHandler()">
+    <input type="email" [(ngModel)]="loginData.emailAddress" name="loginEmail" placeholder="Email" required>
+    <input type="password" [(ngModel)]="loginData.password" name="loginPassword" placeholder="Mot de passe" required>
+    <button id="loginButton" type="submit">Se connecter</button>
+    <p class="alert">{{alertFront}}</p>
+  </form>
+  <button id="notAccount" routerLink="/">Vous n'avez pas encore de compte ? cliquez ici</button>
+</div>

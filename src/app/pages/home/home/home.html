@@ -1,0 +1,77 @@
+<header>
+    <h1 class="title-header"><img id="logo-home" src="assets/logo-home.png">Espace Acquéreur</h1>
+    <div id="login-status">
+  {{ initials }}
+</div>
+</header>
+<section class="container-progress-circle">
+   <div class="skill">
+    <div class="outer">
+        <div class="inner">
+            <div id="step">
+                <h1 #stepElem id="title-step">{{ currentStep }} / 5</h1>
+                    <h2 #stepNumber id="title2-step"><span id="number">{{ stepsTexts }}</span></h2>
+            </div>
+        </div>
+         <svg  width="300px" height="300px"> 
+    <defs>
+        <linearGradient id="GradientColor">
+            <stop offset="0%" stop-color="#DA22FF" />
+            <stop offset="100%" stop-color="#9733EE" />
+        </linearGradient>
+    </defs>
+    <circle #circle id="progress-circle" cx="150" cy="150" r="130" stroke-linecap="round" />
+   </svg>
+    </div>
+   </div>
+</section>
+<section class="container-card-informations">
+
+    <div class="card-1">
+        <div class="left-card">
+        <img src="assets/validation.png" alt="validation">
+        <h1 class="status-card">Compte créé</h1>
+        </div>
+        <div class="right-card">
+        <p class="info-card">Nous étudions votre dossier</p>
+        </div>
+    </div>
+    <div #card2 class="card-2">
+        <div class="left-card">
+    <img #img2 id="img2" src="assets/sand-wait.png" alt="waiting">
+        <h1 class="status-card">Dossier validé</h1>
+        </div>
+        <div class="right-card">
+        <p class="info-card">Vous recevrez un mail explicatif très bientôt</p>
+        </div>
+    </div>
+    <div #card3 class="card-3">
+        <div class="left-card">
+    <img #img3 id="img3" src="assets/sand-wait.png" alt="waiting">
+        <h1 class="status-card">Projet reçu</h1>
+        </div>
+        <div class="right-card">
+        <p class="info-card">Nous revenons rapidement vers vous</p>
+        </div>
+    </div>
+    <div #card4 class="card-4">
+        <div class="left-card">
+    <img #img4 id="img4" src="assets/sand-wait.png" alt="waiting">
+        <h1 class="status-card">Projet validé</h1>
+        </div>
+        <div class="right-card">
+        <p class="info-card">Notre offre vous sera envoyée par mail sous 48h</p>
+        </div>
+    </div>
+    <div #card5 class="card-5">
+        <div class="left-card">
+    <img #img5 id="img5" src="assets/sand-wait.png" alt="waiting">
+        <h1 class="status-card">Contrat signé</h1>
+        </div>
+        <div class="right-card">
+        <p class="info-card">Merci pour votre confiance, et bienvenue dans votre (futur) chez vous</p>
+        </div>
+    </div>
+</section>
+
+<section class="container-logout"><button id="logout" (click)="logout()">Déconnexion</button></section>
