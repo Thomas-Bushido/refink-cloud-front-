@@ -3,21 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "ng": "ng",
     "start": "node server.js",
     "build": "ng build --configuration production",
-    "postinstall": "npm run build",
-    "test": "ng test"
-  },
-  "prettier": {
-    "overrides": [
-      {
-        "files": "*.html",
-        "options": {
-          "parser": "angular"
-        }
-      }
-    ]
+    "postinstall": "npm run build"
   },
   "dependencies": {
     "@angular/common": "^20.1.0",
@@ -32,18 +20,8 @@
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
-    "@angular/build": "^20.1.5",
     "@angular/cli": "^20.1.5",
     "@angular/compiler-cli": "^20.1.0",
-    "@types/express": "^5.0.1",
-    "@types/jasmine": "~5.1.0",
-    "@types/node": "^20.17.19",
-    "jasmine-core": "~5.8.0",
-    "karma": "~6.4.0",
-    "karma-chrome-launcher": "~3.2.0",
-    "karma-coverage": "~2.2.0",
-    "karma-jasmine": "~5.1.0",
-    "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.8.2"
   }
 }
