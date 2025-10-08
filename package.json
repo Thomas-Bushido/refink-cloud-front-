@@ -1,13 +1,13 @@
 {
   "name": "refink-app-buyer-v2",
   "version": "0.1.0",
+  "private": true,
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "serve:ssr:refink-app-buyer-v2": "node dist/refink-app-buyer-v2/server/server.mjs"
+    "start": "node server.js",
+    "build": "ng build --configuration production",
+    "postinstall": "npm run build",
+    "test": "ng test"
   },
   "prettier": {
     "overrides": [
@@ -19,16 +19,13 @@
       }
     ]
   },
-  "private": true,
   "dependencies": {
     "@angular/common": "^20.1.0",
     "@angular/compiler": "^20.1.0",
     "@angular/core": "^20.1.0",
     "@angular/forms": "^20.1.0",
     "@angular/platform-browser": "^20.1.0",
-    "@angular/platform-server": "^20.1.0",
     "@angular/router": "^20.1.0",
-    "@angular/ssr": "^20.1.5",
     "express": "^5.1.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
