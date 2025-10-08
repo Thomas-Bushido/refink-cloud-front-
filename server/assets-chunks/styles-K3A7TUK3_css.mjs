@@ -1,0 +1,2 @@
+export default `html,body{height:100%;margin:0;padding:0}body{min-height:100%}@media (min-width:768px){html{display:flex;justify-content:center;height:100%;width:100%;background-color:#000;margin:0;padding:0}app-root,app-register,app-home{display:block;width:100%;height:100%}body{height:100%;width:70%;background-color:#fff;margin:0;padding:0}}@media (min-width:1040px){html{display:flex;justify-content:center;height:120%;width:100%;background-color:#000}body{font-family:sans-serif;width:80%;background-color:#fff}}
+`;
