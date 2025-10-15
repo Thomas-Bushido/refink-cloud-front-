@@ -1,0 +1,5 @@
+// environment.ts
+export const environment = {
+  production: false,
+  apiUrl: 'https://app-8c64c9fb-207f-4c42-af30-132121a3c14b.cleverapps.io/api'
+};

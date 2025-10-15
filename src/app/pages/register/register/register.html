@@ -1,0 +1,109 @@
+
+<header>
+    <img src="/assets/logo.png" alt="Logo" class="logo-header" />
+
+</header>
+
+
+<div class="register">
+  <h2>Inscription</h2>
+  <form [formGroup]="register_form" (ngSubmit)="RegisterHandler()">
+
+    
+    <input type="text" formControlName="firstName" placeholder="Prénom">
+    <div class="error"> @if(register_form.get('firstName')?.invalid && register_form.get('firstName')?.touched)
+    {<p>Le prénom est obligatoire</p>}
+     </div>
+   
+    <input type="text" formControlName="lastName" placeholder="Nom">
+    <div class="error"> @if(register_form.get('lastName')?.invalid && register_form.get('lastName')?.touched)
+    {<p>Le nom est obligatoire</p>}
+    </div>
+
+    <input type="email" formControlName="emailAddress" placeholder="Adresse email">
+    <div class="error" >@if(register_form.get('emailAddress')?.invalid && register_form.get('emailAddress')?.touched){
+      <div> @if(register_form.get('emailAddress')?.errors?.['required']){<p>L'email est obligatoire</p>}</div>
+      <div> @if(register_form.get('emailAddress')?.errors?.['pattern']){<p>L'email n'est pas valide</p>}</div>
+    }
+    </div>
+
+    
+    <input type="text" formControlName="city" placeholder="Ville">
+    <div class="error">@if(register_form.get('city')?.invalid && register_form.get('city')?.touched){
+      <p>La ville est obligatoire</p>}
+    </div>
+
+  
+    <input type="tel" formControlName="phoneNumber" placeholder="Numéro de téléphone">
+    <div class="error"> @if(register_form.get('phoneNumber')?.invalid && register_form.get('phoneNumber')?.touched){
+      <div> @if(register_form.get('phoneNumber')?.errors?.['required']){<p>Le numéro est obligatoire</p>}</div>
+      <div> @if(register_form.get('phoneNumber')?.errors?.['pattern']){<p>Le numéro doit comporter 10 chiffres</p>}</div>}
+    </div>
+
+   
+  <input type="number" formControlName="postalCode" placeholder="Code postal">
+<div class="error">
+  @if (register_form.get('postalCode')?.invalid && register_form.get('postalCode')?.touched) {
+   <div> @if (register_form.get('postalCode')?.errors?.['required']) {<p>Le code postal est obligatoire</p>}</div>
+   <div> @if (register_form.get('postalCode')?.errors?.['pattern']) {<p>Le code postal doit être composé de 5 chiffres</p>}</div>}
+</div>
+
+
+  
+    <input type="password" formControlName="password" placeholder="Mot de passe">
+    <div class="error">@if(register_form.get('password')?.invalid && register_form.get('password')?.touched){
+      <div>@if(register_form.get('password')?.errors?.['required']){<p>Le mot de passe est obligatoire</p>}</div>
+      <div>@if(register_form.get('password')?.errors?.['minlength']){<p>Le mot de passe doit contenir au moins 8 caractères</p>}</div>}
+    </div>
+
+    <button id="registerButton" type="submit" [disabled]="register_form.invalid">S'inscrire</button>
+  </form>
+
+  <p class="alert">{{ registeredFront }}</p>
+
+  <button id="alreadyAccount" routerLink="/login">Déjà inscrit ? Cliquez ici</button>
+</div>
+
+
+
+
+
+<!--
+<header>
+    <img src="/assets/logo.png" alt="Logo" class="logo-header" />
+
+</header>
+<div class="register">
+  <h2>Inscription</h2>
+  <form (ngSubmit)="onRegisterHandler()">
+    <input type="text" [(ngModel)]="registerData.firstName" name="registerEmail" placeholder="Prénom" required>
+    <input type="text" [(ngModel)]="registerData.lastName" name="registerLastname" placeholder="Nom">
+    <input type="email" [(ngModel)]="registerData.emailAddress" name="registerFirstname" placeholder="adresse email" required>
+    <input type="text" [(ngModel)]="registerData.city" name="registerCity" placeholder="Ville">
+    <input type="number" [(ngModel)]="registerData.phoneNumber" name="registerPhone" placeholder="Numéro de téléphone">
+    <input type="number" [(ngModel)]="registerData.postalCode" name="registerPostal" placeholder="Code postal">
+    <input type="password" [(ngModel)]="registerData.password" name="registerPassword" placeholder="Mot de passe" required>
+    <button id="registerButton" type="submit">S'inscrire</button>
+  </form>
+  <p class="alert">{{registeredFront}}</p>
+
+  <button id="alreadyAccount" routerLink="/login">Déjà inscrit ? cliquez ici</button>
+</div>
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
