@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+  "start": "npm run build && node dist/refink-app-buyer-v2/server/server.mjs",
+  "prestart": "npm run build",
+  "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:refink-app-buyer-v2": "node dist/refink-app-buyer-v2/server/server.mjs"
