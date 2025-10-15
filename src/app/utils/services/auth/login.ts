@@ -8,7 +8,10 @@ import { getApiUrl } from '../../../runtime-config';
   providedIn: 'root'
 })
 export class LoginService {
-  private apiUrl = getApiUrl();
+  // use a getter to resolve the API URL at call time (avoids accessing window during SSR/module init)
+  private get apiUrl(): string {
+    return getApiUrl();
+  }
 
   constructor(private http: HttpClient) {}
 

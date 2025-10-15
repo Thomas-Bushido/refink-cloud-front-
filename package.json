@@ -6,6 +6,7 @@
   "start": "npm run build && node dist/refink-app-buyer-v2/server/server.mjs",
   "prestart": "npm run build",
   "build": "ng build --configuration production",
+  "postbuild": "node scripts/write-runtime-config.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:refink-app-buyer-v2": "node dist/refink-app-buyer-v2/server/server.mjs"
