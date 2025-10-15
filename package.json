@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
   "start": "node dist/refink-app-buyer-v2/server/server.mjs",
-  "build": "ng build --configuration production",
+  "build": "ng build --configuration production && ng run refink-app-buyer-v2:server:production",
   "postbuild": "node scripts/write-runtime-config.js",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
